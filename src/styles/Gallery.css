@@ -1,5 +1,10 @@
 .gallery {
   background-color: #f6f6f6;
   border-radius: 25px;
-  padding: 56px 50px;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 50px 56px;
+  gap: 30px;
 }

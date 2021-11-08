@@ -1,4 +1,10 @@
 .banner {
   height: 111px;
+  width: 335px;
   /* background-color: black; */
+}
+
+.banner_title {
+  position: absolute;
+  z-index: 1;
 }
