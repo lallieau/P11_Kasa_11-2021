@@ -1,6 +1,6 @@
-import logo from "../assets/logo.png";
-import Nav from "./Nav";
-import "../styles/Header.css";
+import logo from "../../public/assets/logo.png";
+import Nav from "../Nav";
+import "./index.css";
 
 export default function Header() {
   return (

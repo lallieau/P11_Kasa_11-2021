@@ -1,5 +1,4 @@
-import Img from "../assets/Img.png";
-import "../styles/Thumb.css";
+//import "../styles/Thumb.css";
 
 export default function Thumb({title, cover}) {
   return (
