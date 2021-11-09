@@ -6,7 +6,7 @@
   padding: 20px;
   margin: 0;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   white-space: normal;
 }
 
@@ -15,21 +15,22 @@
   align-items: flex-end;
   border-radius: 10px;
   margin: 10px;
-  max-width: 340px;
+  max-width: 335px;
   justify-content: center;
 }
 
 .thumb_image {
-  max-width: 340px;
+  max-width: 335px;
   height: 255px;
   border-radius: 10px;
+  z-index: 0;
 }
 
 .thumb_bg {
   border-radius: 10px;
   position: absolute;
   z-index: 1;
-  max-width: 340px;
+  width: 335px;
   height: 255px;
   background: linear-gradient(
     180deg,

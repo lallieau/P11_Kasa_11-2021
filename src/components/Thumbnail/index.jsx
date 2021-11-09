@@ -1,6 +1,6 @@
-//import "../styles/Thumb.css";
+import "../Thumbnail/index.css";
 
-export default function Thumb({title, cover}) {
+export const Thumbnail = ({title, cover}) => {
   return (
     <div className="thumb">
       <h2 className="thumb_title">{title}</h2>

@@ -1,3 +1,8 @@
-export default function Lodging(){
-    return <h1>Test</h1>
-}
+import {Layout} from '../App'
+import {Banner} from '../components/Banner'
+
+export const Lodging = () => (
+    <Layout>
+      <Banner />
+    </Layout>
+  );

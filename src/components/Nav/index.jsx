@@ -1,4 +1,4 @@
-export default function Nav() {
+export const Nav = () => {
   return (
     <div className="nav">
       <a href="index.html">Accueil</a>

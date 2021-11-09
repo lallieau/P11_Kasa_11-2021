@@ -1,5 +1,5 @@
-import Thumb from "../Thumbnail";
-//import "../Gallery/index.css";
+import {Thumbnail} from "../Thumbnail";
+import "../Gallery/index.css";
 
 import { useLodgings } from "../../hooks/useLodgings";
 
@@ -9,7 +9,7 @@ export const Gallery = () => {
   return (
     <div className="gallery">
       {lodgings.map((lodging) => (
-        <Thumb title={lodging.title} cover={lodging.cover} />
+        <Thumbnail title={lodging.title} cover={lodging.cover} />
       ))}
     </div>
   );

@@ -1,12 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import { Home } from '../src/pages/Home'
-import Nav from '../src/components/Nav'
+import {Header} from "./components/Header";
+import { Home } from '../src/pages/Home';
+import { Lodging } from '../src/pages/Lodging';
 
 export const Router = () => {
   return (
     <Routes>
       <Route path="/" index element={<Home />} />
+      <Route path="/lodging" index element={<Lodging />} />
     </Routes>
   );
 };
@@ -14,7 +15,6 @@ export const Router = () => {
 export const Layout = ({ children }) => {
   return (
     <>
-      <Nav />
       <Header />
       {children}
     </>
