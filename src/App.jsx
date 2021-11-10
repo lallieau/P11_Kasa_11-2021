@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import {Header} from "./components/Header";
+import {Footer} from "./components/Footer"
 import { Home } from '../src/pages/Home';
 import { Lodging } from '../src/pages/Lodging';
 
@@ -15,8 +16,11 @@ export const Router = () => {
 export const Layout = ({ children }) => {
   return (
     <>
-      <Header />
-      {children}
+      <div className="container">
+        <Header />
+        {children}
+      </div>
+      <Footer />
     </>
   );
 };
