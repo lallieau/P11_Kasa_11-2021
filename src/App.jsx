@@ -2,13 +2,15 @@ import { Routes, Route } from "react-router-dom";
 import {Header} from "./components/Header";
 import {Footer} from "./components/Footer"
 import { Home } from '../src/pages/Home';
-import { Lodging } from '../src/pages/Lodging';
+import { Accomodation } from './pages/Accomodation';
 
 export const Router = () => {
   return (
     <Routes>
       <Route path="/" index element={<Home />} />
-      <Route path="/lodging" index element={<Lodging />} />
+      <Route path="/accomodation" element={<Accomodation />}>
+        <Route path=":accomodationId" element={<Accomodation />}/>
+      </Route>
     </Routes>
   );
 };

@@ -19,13 +19,20 @@
   justify-content: center;
 }
 
+.thumb:hover {
+  filter: brightness(0.7);
+  transition: 0.4s;
+}
+
 .thumb_image {
   max-width: 335px;
   height: 255px;
   border-radius: 10px;
   z-index: 0;
+  object-fit: cover;
+  filter: brightness(0.8);
 }
-
+/* 
 .thumb_bg {
   border-radius: 10px;
   position: absolute;
@@ -37,4 +44,4 @@
     rgba(255, 255, 255, 0) 0%,
     rgba(0, 0, 0, 0.5) 100%
   );
-}
+} */
