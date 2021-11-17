@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 export const Nav = () => {
   return (
     <div className="nav">
-      <a href="index.html">Accueil</a>
-      <a href="index.html">A propos</a>
+      <Link to="/">Accueil</Link>
+      <Link to="/a-propos">À propos</Link>
     </div>
   );
 }

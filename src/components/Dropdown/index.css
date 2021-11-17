@@ -1,0 +1,24 @@
+.dropdown_button {
+  background-color: #ff6060;
+  border-radius: 5px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.dropdown_button_arrow {
+  width: 18.42px;
+}
+
+.dropdown_content {
+  background-color: #f6f6f6;
+  padding: 17px 10px 0px 10px;
+  border-radius: 5px;
+  margin-top: -10px;
+  z-index: 0;
+}

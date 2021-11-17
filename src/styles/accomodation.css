@@ -1,0 +1,33 @@
+.accomodation {
+  margin: 0 20px;
+}
+
+.accomodation_header_infos h1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.accomodation_header_infos h2 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 142.6%;
+}
+
+.accomodation_header_infos_tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.accomodation_header_host-infos {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 0 0;
+}
+
+.accomodation_details {
+  display: flex;
+  flex-direction: column;
+}

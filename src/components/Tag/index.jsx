@@ -1,3 +1,5 @@
+import '../Tag/index.css'
+
 export const Tag = ({tag}) => (
-    <span key={tag}>{tag}</span>
+    <span className="tag" key={tag}>{tag}</span>
 )

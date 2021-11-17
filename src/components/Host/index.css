@@ -1,0 +1,19 @@
+.host {
+  display: flex;
+  align-items: center;
+}
+
+.host_name {
+  font-size: 12px;
+  width: 3.5rem;
+  line-height: 1.4;
+  text-align: right;
+  font-weight: 500;
+}
+
+.host_picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  margin-left: 10px;
+}

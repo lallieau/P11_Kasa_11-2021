@@ -1,0 +1,39 @@
+.carousel_image {
+  width: 100%;
+  height: 255px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel_button_prev,
+.carousel_button_next {
+  background: none;
+}
+
+.carousel_button_arrow {
+  width: 11px;
+  padding: 10px;
+}
+
+.carousel_button_prev:disabled,
+.carousel_button_next:disabled {
+  visibility: hidden;
+}
+
+.carousel_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  margin: 0 auto;
+}
