@@ -130,11 +130,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #ff6060;
   font-weight: 400;
+  height: 100%;
 }
 
 .container {
+  height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  margin: 0 auto;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  max-width: 1240px;
+  /* margin: 0 auto; */
 }

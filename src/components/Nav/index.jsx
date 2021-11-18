@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export const Nav = () => {
   return (
@@ -7,4 +7,4 @@ export const Nav = () => {
       <Link to="/a-propos">À propos</Link>
     </div>
   );
-}
+};

@@ -1,7 +1,7 @@
-import {Thumbnail} from "../Thumbnail";
-import "../Gallery/index.css";
+import { Thumbnail } from '../Thumbnail';
+import '../Gallery/index.css';
 
-import { useAccomodations } from "../../hooks/useAccomodations";
+import { useAccomodations } from '../../hooks/useAccomodations';
 
 export const Gallery = () => {
   const accomodations = useAccomodations();
@@ -14,4 +14,3 @@ export const Gallery = () => {
     </div>
   );
 };
-

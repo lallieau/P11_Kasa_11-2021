@@ -12,8 +12,9 @@
   position: absolute;
   z-index: 2;
   font-size: 24px;
-  width: 180px;
-  padding-left: 20px;
+  font-weight: 500;
+  width: 57%;
+  padding-left: 40px;
   font-weight: 400;
   color: #fff;
 }
@@ -26,4 +27,8 @@
   z-index: 0;
   filter: brightness(0.7);
   margin: 0 20px;
+}
+
+.banner_image--home {
+  height: 111px;
 }
