@@ -3,7 +3,7 @@
 }
 
 .accomodation_header_infos h1 {
-  font-size: 18px;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
@@ -30,4 +30,21 @@
 .accomodation_details {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 900px) {
+  .accomodation_header_host-infos {
+    display: block;
+  }
+
+  .accomodation_header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .accomodation_details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
 }

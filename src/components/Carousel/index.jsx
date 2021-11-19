@@ -1,54 +1,66 @@
 import { useState } from 'react';
 import '../Carousel/index.css';
-import Prev from '../../public/assets/prev-arrow.svg';
-import Next from '../../public/assets/next-arrow.svg';
+import PrevIcon from '../../public/assets/prev-arrow.svg';
+import NextIcon from '../../public/assets/next-arrow.svg';
+
+const CarouselButton = ({ buttonClassName, event, isPrev }) => {
+  return (
+    <button className={buttonClassName} onClick={event}>
+      {isPrev ? (
+        <img className="carousel_button_arrow" src={PrevIcon} alt="Précédent" />
+      ) : (
+        <img className="carousel_button_arrow" src={NextIcon} alt="Suivant" />
+      )}
+    </button>
+  );
+};
 
 export const Carousel = ({ pictures }) => {
   const [index, setIndex] = useState(0);
 
-  let hasPrev = index > 0;
-  let hasNext = index < pictures.length - 1;
+  const hasPrev = index > 0;
+  const hasNext = index < pictures.length - 1;
 
   const handlePrevClick = () => {
     if (hasPrev) {
-      setIndex(index - 1);
-    } else {
-      setIndex(pictures.length - 1);
+      return setIndex(index - 1);
     }
+
+    setIndex(pictures.length - 1);
   };
 
   const handleNextClick = () => {
     if (hasNext) {
-      setIndex(index + 1);
-    } else {
-      setIndex(0);
+      return setIndex(index + 1);
     }
+    setIndex(0);
   };
 
-  let picture = pictures[index];
+  const pictureUrl = pictures[index];
+  const isDisable = pictures.length === 0;
 
   return (
     <div className="carousel">
       <div className="carousel_button">
-        <button
-          className="carousel_button_prev"
-          onClick={handlePrevClick}
-          disabled={pictures.length <= 1}
-        >
-          <img className="carousel_button_arrow" src={Prev} alt="Précédent" />
-        </button>
-        <button
-          className="carousel_button_next"
-          onClick={handleNextClick}
-          disabled={pictures.length <= 1}
-        >
-          <img className="carousel_button_arrow" src={Next} alt="Suivant" />
-        </button>
+        {!isDisable ? (
+          <>
+            <CarouselButton
+              buttonClassName="carousel_button_prev"
+              event={handlePrevClick}
+              isPrev={true}
+            />
+            <CarouselButton
+              buttonClassName="carousel_button_next"
+              event={handleNextClick}
+              isPrev={false}
+            />
+          </>
+        ) : null}
       </div>
       <img
         className="carousel_image"
-        key={picture}
-        src={picture}
+        key={pictureUrl}
+        src={pictureUrl}
         alt="Accomodation"
       />
       {/*counter a rajouter*/}

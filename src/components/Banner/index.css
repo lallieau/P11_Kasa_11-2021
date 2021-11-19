@@ -32,3 +32,28 @@
 .banner_image--home {
   height: 111px;
 }
+
+.banner--about {
+  height: 223px;
+}
+
+@media screen and (min-width: 900px) {
+  .banner_image--about {
+    min-width: 1100px;
+    max-width: 1240px;
+    height: 100%;
+  }
+
+  .banner_image--home {
+    min-width: 1100px;
+    max-width: 1240px;
+    height: 100%;
+  }
+
+  .banner_image {
+    height: 100%;
+  }
+  .banner {
+    height: 223px;
+  }
+}

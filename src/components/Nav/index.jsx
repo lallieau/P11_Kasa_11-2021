@@ -4,7 +4,7 @@ export const Nav = () => {
   return (
     <div className="nav">
       <Link to="/">Accueil</Link>
-      <Link to="/a-propos">À propos</Link>
+      <Link to="/about">À propos</Link>
     </div>
   );
 };

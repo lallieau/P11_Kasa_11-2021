@@ -1,48 +1,69 @@
-import { Layout } from '../App';
+import { Layout } from '../utils/Layout';
 import { Carousel } from '../components/Carousel';
 import { Tag } from '../components/Tag';
 import { Host } from '../components/Host';
 import { Ratings } from '../components/Ratings';
 import { Dropdown } from '../components/Dropdown';
 import { useParams } from 'react-router-dom';
-import { getAccomodation } from '../hooks/useAccomodations';
+import { useAccomodations } from '../hooks/useAccomodations';
 import '../styles/accomodation.css';
 
+const MainInfos = ({ title, location, tags }) => (
+  <div className="accomodation_header_infos">
+    <h1>{title}</h1>
+    <h2>{location}</h2>
+    <div className="accomodation_header_infos_tags">
+      {tags.map((tag) => (
+        <Tag tag={tag} />
+      ))}
+    </div>
+  </div>
+);
+
+const HostInfos = ({ host, rating }) => (
+  <div className="accomodation_header_host-infos">
+    <Host host={host} />
+    <Ratings rating={rating} />
+  </div>
+);
+
+const Header = ({ rating, title, host, location, tags }) => (
+  <div className="accomodation_header">
+    <MainInfos title={title} location={location} tags={tags} />
+    <HostInfos host={host} rating={rating} />
+  </div>
+);
+
+const Content = ({ description, equipments }) => (
+  <div className="accomodation_details">
+    <Dropdown title="Description" content={<p>{description}</p>} />
+    <Dropdown
+      title="Équipements"
+      content={
+        <ul>
+          {equipments.map((equipment) => (
+            <li>{equipment}</li>
+          ))}
+        </ul>
+      }
+    />
+  </div>
+);
+
 export const Accomodation = () => {
-  let params = useParams();
-  let accomodation = getAccomodation(params.accomodationId);
+  const accomodation = useAccomodations().getAccomodationById(
+    useParams().accomodationId
+  );
+
   return (
     <Layout>
       <div className="accomodation">
         <Carousel pictures={accomodation.pictures} />
-        <div className="accomodation_header">
-          <div className="accomodation_header_infos">
-            <h1>{accomodation.title}</h1>
-            <h2>{accomodation.location}</h2>
-            <div className="accomodation_header_infos_tags">
-              {accomodation.tags.map((tag) => (
-                <Tag tag={tag} />
-              ))}
-            </div>
-          </div>
-          <div className="accomodation_header_host-infos">
-            <Host {...accomodation} />
-            <Ratings rating={accomodation.rating} />
-          </div>
-        </div>
-
-        <div className="accomodation_details">
-          <Dropdown title="Description">
-            <p>{accomodation.description}</p>
-          </Dropdown>
-          <Dropdown title="Équipements">
-            <ul>
-              {accomodation.equipments.map((equipment) => (
-                <li>{equipment}</li>
-              ))}
-            </ul>
-          </Dropdown>
-        </div>
+        <Header {...accomodation} />
+        <Content
+          description={accomodation.description}
+          equipments={accomodation.equipments}
+        />
       </div>
     </Layout>
   );

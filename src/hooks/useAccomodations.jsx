@@ -1,9 +1,27 @@
-import accomodation from '../data.json';
+// import { useState, useEffect } from 'react';
+
+import ACCOMODATIONS from '../data.json';
 
 export const useAccomodations = () => {
-  return accomodation;
+  const getAccomodations = () => ACCOMODATIONS;
+  const getAccomodationById = (id) =>
+    ACCOMODATIONS.find((accomodation) => accomodation.id === id);
+
+  return { getAccomodations, getAccomodationById };
 };
 
-export const getAccomodation = (id) => {
-  return accomodation.find((accomodation) => accomodation.id === id);
-};
+// export const useAccomodations = (id) => {
+//   const [accomodations, setAccomodations] = useState(() => ACCOMODATIONS);
+
+//   const getAccomodation = () => ACCOMODATIONS;
+//   const getAccomodationById = (id) =>
+//     ACCOMODATIONS.find((accomodation) => accomodation.id === id);
+
+//   useEffect(() => {
+//     if (id) {
+//       setAccomodations(getAccomodationById(id));
+//     }
+//   }, [id]);
+
+//   return { accomodations, getAccomodation, getAccomodationById };
+// };
