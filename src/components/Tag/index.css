@@ -1,8 +1,8 @@
 .tag {
   padding: 2px 13px;
   margin-right: 10px;
-  background-color: #ff6060;
+  background-color: var(--primary-color);
   border-radius: 15px;
-  color: #fff;
-  font-size: 10px;
+  color: var(--white-color);
+  font-size: var(--small-font);
 }

@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #ff6060;
+  --secondary-color: #f6f6f6;
+  --white-color: #fff;
+  --black-color: #000;
+
+  --medium-weigth: 500;
+  --regular-weigth: 400;
+
+  --small-font: 0.625rem;
+  --medium-font: 0.813rem;
+  --large-font: 1.125rem;
+  --title-font: 1.5rem;
+
+  --small-logo: 100px;
+  --medium-logo: 120px;
+  --large-logo: 150px;
+}

@@ -11,6 +11,6 @@
   .gallery {
     border-radius: 25px;
     grid-template-columns: 340px;
-    background-color: #f6f6f6;
+    background-color: var(--white-color);
   }
 }

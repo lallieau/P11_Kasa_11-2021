@@ -3,9 +3,9 @@ import '../Carousel/index.css';
 import PrevIcon from '../../public/assets/prev-arrow.svg';
 import NextIcon from '../../public/assets/next-arrow.svg';
 
-const CarouselButton = ({ buttonClassName, event, isPrev }) => {
+const CarouselButton = ({ buttonClassName, event, isPrev, isDisable }) => {
   return (
-    <button className={buttonClassName} onClick={event}>
+    <button className={buttonClassName} disabled={isDisable} onClick={event}>
       {isPrev ? (
         <img className="carousel_button_arrow" src={PrevIcon} alt="Précédent" />
       ) : (
@@ -37,25 +37,25 @@ export const Carousel = ({ pictures }) => {
   };
 
   const pictureUrl = pictures[index];
-  const isDisable = pictures.length === 0;
+  const isDisable = pictures.length === 1;
 
   return (
     <div className="carousel">
       <div className="carousel_button">
-        {!isDisable ? (
-          <>
-            <CarouselButton
-              buttonClassName="carousel_button_prev"
-              event={handlePrevClick}
-              isPrev={true}
-            />
-            <CarouselButton
-              buttonClassName="carousel_button_next"
-              event={handleNextClick}
-              isPrev={false}
-            />
-          </>
-        ) : null}
+        <>
+          <CarouselButton
+            buttonClassName="carousel_button_prev"
+            event={handlePrevClick}
+            isPrev={true}
+            isDisable={isDisable}
+          />
+          <CarouselButton
+            buttonClassName="carousel_button_next"
+            event={handleNextClick}
+            isPrev={false}
+            isDisable={isDisable}
+          />
+        </>
       </div>
       <img
         className="carousel_image"

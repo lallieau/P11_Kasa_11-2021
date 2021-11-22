@@ -1,19 +1,19 @@
 .host {
   display: flex;
   align-items: center;
+  justify-content: end;
+  gap: 20px;
 }
 
 .host_name {
-  font-size: 12px;
-  width: 3.5rem;
+  font-size: var(--medium-font);
+  font-weight: var(--medium-weigth);
   line-height: 1.4;
   text-align: right;
-  font-weight: 500;
+  width: 30%;
 }
 
 .host_picture {
-  width: 32px;
-  height: 32px;
-  border-radius: 32px;
-  margin-left: 10px;
+  width: 30%;
+  border-radius: 50px;
 }

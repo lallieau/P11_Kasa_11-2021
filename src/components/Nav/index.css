@@ -1,0 +1,24 @@
+.nav_link {
+  text-decoration: none;
+  font-size: var(--medium-font);
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: var(--medium-weigth);
+}
+
+.nav_link--active {
+  text-decoration: underline;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media screen and (min-width: 900px) {
+  .nav_link {
+    font-size: var(--title-font);
+    text-transform: inherit;
+  }
+}

@@ -1,5 +1,5 @@
 .header_kasa-logo {
-  width: 145px;
+  width: var(--small-logo);
 }
 
 .header {
@@ -9,6 +9,12 @@
   margin: 20px;
 }
 
-a {
-  text-decoration: none;
+.header_link {
+  width: 50%;
+}
+
+@media screen and (min-width: 900px) {
+  .header_kasa-logo {
+    width: var(--large-logo);
+  }
 }

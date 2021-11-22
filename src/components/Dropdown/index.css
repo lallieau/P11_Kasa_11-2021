@@ -1,23 +1,25 @@
+@import "../../styles/variables.css";
+
 .dropdown_button {
-  background-color: #ff6060;
+  background-color: var(--primary-color);
   border-radius: 5px;
-  font-size: 13px;
+  font-size: var(--medium-font);
   display: flex;
   justify-content: space-between;
   padding: 6px 10px;
-  color: #fff;
-  font-weight: 500;
+  color: var(--white-color);
+  font-weight: var(--medium-weigth);
   margin-top: 20px;
   z-index: 1;
   width: 100%;
 }
 
 .dropdown_button_arrow {
-  width: 18.42px;
+  width: var(--large-font);
 }
 
 .dropdown_content {
-  background-color: #f6f6f6;
+  background-color: var(--secondary-color);
   padding: 17px 10px 0px 10px;
   border-radius: 5px;
   margin-top: -10px;

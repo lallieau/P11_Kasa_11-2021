@@ -1,0 +1,21 @@
+.error {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.error_image {
+  width: 40%;
+  padding: 50px 0 30px;
+}
+
+.error_message {
+  padding: 0px 20px 100px 20px;
+  font-size: 36px;
+}
+
+.error_link {
+  text-decoration: underline;
+  color: var(--primary-color);
+  font-size: var(--large-font);
+}

@@ -18,13 +18,14 @@
 }
 
 .carousel_button_arrow {
-  width: 11px;
+  width: var(--small-font);
   padding: 10px;
 }
 
 .carousel_button_prev:disabled,
 .carousel_button_next:disabled {
   visibility: hidden;
+  opacity: 0;
 }
 
 .carousel_button {

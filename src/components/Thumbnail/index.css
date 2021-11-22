@@ -1,27 +1,20 @@
-.thumb_title {
-  position: absolute;
-  z-index: 2;
-  color: #fff;
-  width: 300px;
-  padding: 20px;
-  margin: 0;
-  font-weight: 400;
-  font-size: 18px;
-  white-space: normal;
-}
-
 .thumb {
+  position: relative;
   display: flex;
   align-items: flex-end;
   border-radius: 10px;
   margin: 10px;
-  max-width: 335px;
-  justify-content: center;
 }
 
-.thumb_image:hover {
-  filter: brightness(0.9);
-  transition: 0.4s;
+.thumb_title {
+  font-weight: var(--regular-weigth);
+  font-size: var(--large-font);
+  color: var(--white-color);
+  position: absolute;
+  z-index: 2;
+  text-align: left;
+  padding: 20px;
+  margin: 0;
 }
 
 .thumb_image {
@@ -31,6 +24,11 @@
   z-index: 0;
   object-fit: cover;
   filter: brightness(0.8);
+}
+
+.thumb_image:hover {
+  filter: brightness(0.9);
+  transition: 0.4s;
 }
 
 @media screen and (min-width: 900px) {
