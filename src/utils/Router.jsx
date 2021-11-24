@@ -12,8 +12,7 @@ export const Router = () => {
         <Route path=":accomodationId" element={<Accomodation />} />
       </Route>
       <Route path="/about" element={<About />} />
-      {/* <Route path="/error" element={<Error />} /> */}
-      <Route component={Error} />
+      <Route path="*" element={<Error />} />
     </Routes>
   );
 };
