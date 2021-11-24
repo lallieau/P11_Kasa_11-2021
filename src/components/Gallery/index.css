@@ -3,8 +3,8 @@
   flex-wrap: wrap;
   justify-items: center;
   justify-content: center;
-  grid-template-columns: 355px;
-  padding: 20px 0px;
+  grid-template-columns: 1fr;
+  padding: 10px 0px;
 }
 
 @media screen and (min-width: 900px) {

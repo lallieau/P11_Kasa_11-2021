@@ -1,6 +1,5 @@
 .carousel_image {
   width: 100%;
-  height: 255px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -9,7 +8,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .carousel_button_prev,
@@ -37,4 +35,27 @@
   z-index: 1;
   position: absolute;
   margin: 0 auto;
+}
+
+.carousel_counter {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 900px) {
+  .carousel_counter {
+    visibility: visible;
+    position: absolute;
+    bottom: 0;
+    color: var(--white-color);
+    font-size: var(--large-font);
+    font-weight: var(--medium-weigth);
+  }
+
+  .carousel {
+    justify-content: center;
+  }
+
+  .carousel_image {
+    height: 40vh;
+  }
 }

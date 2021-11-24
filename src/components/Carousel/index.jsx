@@ -63,7 +63,9 @@ export const Carousel = ({ pictures }) => {
         src={pictureUrl}
         alt="Accomodation"
       />
-      {/*counter a rajouter*/}
+      <p className="carousel_counter">
+        {index + 1}/{pictures.length}
+      </p>
     </div>
   );
 };

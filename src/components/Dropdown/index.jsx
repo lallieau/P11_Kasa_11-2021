@@ -12,9 +12,9 @@ export const Dropdown = ({ title, content }) => {
       <button className="dropdown_button" onClick={handleMoreClick}>
         {title}
         {showMore ? (
-          <img className="dropdown_button_arrow" src={Ahead} alt="Ahead" />
-        ) : (
           <img className="dropdown_button_arrow" src={Back} alt="Back" />
+        ) : (
+          <img className="dropdown_button_arrow" src={Ahead} alt="Ahead" />
         )}
       </button>
       {showMore && <div className="dropdown_content">{content}</div>}

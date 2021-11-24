@@ -6,3 +6,10 @@
   color: var(--white-color);
   font-size: var(--small-font);
 }
+
+@media screen and (min-width: 900px) {
+  .tag {
+    padding: 4px 13px;
+    margin-top: 5px;
+  }
+}

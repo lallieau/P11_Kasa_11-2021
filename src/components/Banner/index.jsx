@@ -1,6 +1,6 @@
 import '../Banner/index.css';
 
-export const Banner = ({ children, image, title = null, size = 'xs' }) => {
+export const Banner = ({ children, image, title, size }) => {
   const sizes = {
     xs: '20vh',
     sm: '30vh',
@@ -10,9 +10,7 @@ export const Banner = ({ children, image, title = null, size = 'xs' }) => {
   return (
     <div className={'banner'} style={{ height: sizes[size] }}>
       {children}
-      {title ? (
-        <h1 className="banner_title">Chez vous, partout et ailleurs</h1>
-      ) : null}
+      {title ? <h1 className="banner_title">{title}</h1> : null}
       <img
         src={image}
         alt="Paysage"
