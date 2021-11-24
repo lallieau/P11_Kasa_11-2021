@@ -1,6 +1,6 @@
 import { Layout } from '../utils/Layout';
 import { Gallery } from '../components/Gallery';
-import bannerImage from '../public/assets/bannerImage.png';
+import bannerImage from '../assets/bannerImage.png';
 
 export const Home = () => (
   <Layout

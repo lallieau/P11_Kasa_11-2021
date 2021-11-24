@@ -1,5 +1,5 @@
-import disableStar from '../../public/assets/disable-star.svg';
-import activeStar from '../../public/assets/active-star.svg';
+import disableStar from '../../assets/disable-star.svg';
+import activeStar from '../../assets/active-star.svg';
 import '../Ratings/index.css';
 
 export const Ratings = ({ rating }) => {

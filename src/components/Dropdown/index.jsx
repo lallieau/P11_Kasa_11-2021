@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Back from '../../public/assets/arrow-back.svg';
-import Ahead from '../../public/assets/arrow-ahead.svg';
+import Back from '../../assets/arrow-back.svg';
+import Ahead from '../../assets/arrow-ahead.svg';
 import './index.css';
 
 export const Dropdown = ({ title, content }) => {

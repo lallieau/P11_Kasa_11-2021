@@ -1,7 +1,7 @@
 import { Dropdown } from '../components/Dropdown';
 import '../styles/about.css';
 import { Layout } from '../utils/Layout';
-import aboutBannerImage from '../public/assets/about-banner-image.png';
+import aboutBannerImage from '../assets/about-banner-image.png';
 
 const DROPDOWN_INFO = [
   {

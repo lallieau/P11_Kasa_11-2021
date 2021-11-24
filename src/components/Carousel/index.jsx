@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../Carousel/index.css';
-import PrevIcon from '../../public/assets/prev-arrow.svg';
-import NextIcon from '../../public/assets/next-arrow.svg';
+import PrevIcon from '../../assets/prev-arrow.svg';
+import NextIcon from '../../assets/next-arrow.svg';
 
 const CarouselButton = ({ buttonClassName, event, isPrev, isDisable }) => {
   return (

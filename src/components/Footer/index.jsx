@@ -1,4 +1,4 @@
-import logo from '../../public/assets/logo-kasa-blanc.png';
+import logo from '../../assets/logo-kasa-blanc.png';
 import '../Footer/index.css';
 
 export const Footer = () => {

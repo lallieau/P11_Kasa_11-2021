@@ -1,5 +1,5 @@
 import { Layout } from '../utils/Layout';
-import ErrorImage from '../public/assets/error-image.png';
+import ErrorImage from '../assets/error-image.png';
 import { Link } from 'react-router-dom';
 import '../styles/error.css';
 
