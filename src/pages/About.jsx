@@ -30,7 +30,7 @@ export const About = () => (
   <Layout bannerImage={aboutBannerImage} bannerTitle={''} size={'sm'}>
     <div className="about">
       {DROPDOWN_INFO.map(({ title, content }) => (
-        <Dropdown title={title} content={content} />
+        <Dropdown key={title} title={title} content={content} />
       ))}
     </div>
   </Layout>

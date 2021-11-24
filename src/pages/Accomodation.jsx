@@ -14,7 +14,7 @@ const MainInfos = ({ title, location, tags }) => (
     <h2>{location}</h2>
     <div className="accomodation_header_infos_tags">
       {tags.map((tag) => (
-        <Tag tag={tag} />
+        <Tag key={tag} tag={tag} />
       ))}
     </div>
   </div>
@@ -42,7 +42,7 @@ const Content = ({ description, equipments }) => (
       content={
         <ul>
           {equipments.map((equipment) => (
-            <li>{equipment}</li>
+            <li key={equipment}>{equipment}</li>
           ))}
         </ul>
       }

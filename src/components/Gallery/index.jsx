@@ -8,7 +8,7 @@ export const Gallery = () => {
   return (
     <div className="gallery">
       {accomodations.map((accomodation) => (
-        <Thumbnail {...accomodation} />
+        <Thumbnail key={accomodation.id} {...accomodation} />
       ))}
     </div>
   );
