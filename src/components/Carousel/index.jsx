@@ -25,8 +25,9 @@ export const Carousel = ({ pictures }) => {
     if (hasPrev) {
       return setIndex(index - 1);
     }
-
-    setIndex(pictures.length - 1);
+    if (pictures) {
+      setIndex(pictures.length - 1);
+    }
   };
 
   const handleNextClick = () => {

@@ -1,10 +1,10 @@
+import { useParams, Navigate } from 'react-router-dom';
 import { Layout } from '../utils/Layout';
 import { Carousel } from '../components/Carousel';
 import { Tag } from '../components/Tag';
 import { Host } from '../components/Host';
 import { Ratings } from '../components/Ratings';
 import { Dropdown } from '../components/Dropdown';
-import { useParams } from 'react-router-dom';
 import { useAccomodations } from '../hooks/useAccomodations';
 import '../styles/accomodation.css';
 
@@ -13,9 +13,7 @@ const MainInfos = ({ title, location, tags }) => (
     <h1>{title}</h1>
     <h2>{location}</h2>
     <div className="accomodation_header_infos_tags">
-      {tags.map((tag) => (
-        <Tag key={tag} tag={tag} />
-      ))}
+      {tags && tags.map((tag) => <Tag key={tag} tag={tag} />)}
     </div>
   </div>
 );
@@ -55,14 +53,16 @@ export const Accomodation = () => {
     useParams().accomodationId
   );
 
+  if (!accomodation) return <Navigate to="/404" />;
+
   return (
     <Layout>
       <div className="accomodation">
-        <Carousel pictures={accomodation.pictures} />
+        <Carousel pictures={accomodation?.pictures} />
         <Header {...accomodation} />
         <Content
-          description={accomodation.description}
-          equipments={accomodation.equipments}
+          description={accomodation?.description}
+          equipments={accomodation?.equipments}
         />
       </div>
     </Layout>

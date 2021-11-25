@@ -2,17 +2,19 @@
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
+  height: 100%;
 }
 
 .carousel {
   position: relative;
-  display: flex;
-  align-items: center;
+  height: 30vh;
+  width: 100%;
 }
 
 .carousel_button_prev,
 .carousel_button_next {
   background: none;
+  height: 30vh;
 }
 
 .carousel_button_arrow {
@@ -52,7 +54,11 @@
   }
 
   .carousel {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    height: 40vh;
+    width: 100%;
   }
 
   .carousel_image {
