@@ -7,9 +7,7 @@ export const Layout = ({ children, bannerImage, bannerTitle, size }) => {
     <div className="container">
       <div className="content">
         <Header />
-        {bannerImage ? (
-          <Banner image={bannerImage} title={bannerTitle} size={size} />
-        ) : null}
+        <Banner image={bannerImage} title={bannerTitle} size={size} />
         {children}
       </div>
       <Footer />

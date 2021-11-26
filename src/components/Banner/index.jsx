@@ -7,6 +7,8 @@ export const Banner = ({ children, image, title, size }) => {
     xl: '40vh',
   };
 
+  if (!image) return null;
+
   return (
     <div className={'banner'} style={{ height: sizes[size] }}>
       {children}

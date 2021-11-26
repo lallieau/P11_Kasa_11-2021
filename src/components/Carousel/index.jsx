@@ -47,7 +47,7 @@ export const Carousel = ({ pictures }) => {
           <CarouselButton
             buttonClassName="carousel_button_prev"
             event={handlePrevClick}
-            isPrev={true}
+            isPrev
             isDisable={isDisable}
           />
           <CarouselButton

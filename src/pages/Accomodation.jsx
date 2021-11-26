@@ -1,66 +1,58 @@
-import { useParams, Navigate } from 'react-router-dom';
-import { Layout } from '../utils/Layout';
-import { Carousel } from '../components/Carousel';
-import { Tag } from '../components/Tag';
-import { Host } from '../components/Host';
-import { Ratings } from '../components/Ratings';
-import { Dropdown } from '../components/Dropdown';
-import { useAccomodations } from '../hooks/useAccomodations';
+import {useParams} from 'react-router-dom';
+import {Layout} from '../utils/Layout';
+import {Carousel} from '../components/Carousel';
+import {Tag} from '../components/Tag';
+import {Host} from '../components/Host';
+import {Ratings} from '../components/Ratings';
+import {Dropdown} from '../components/Dropdown';
+import {Error404} from '../components/Errors/404';
+import {useAccomodations} from '../hooks/useAccomodations';
 import '../styles/accomodation.css';
 
-const MainInfos = ({ title, location, tags }) => (
+const Infos = ({title, location, tags}) => (
   <div className="accomodation_header_infos">
     <h1>{title}</h1>
     <h2>{location}</h2>
     <div className="accomodation_header_infos_tags">
-      {tags && tags.map((tag) => <Tag key={tag} tag={tag} />)}
+      {tags && tags.map(tag => <Tag key={tag} tag={tag} />)}
     </div>
   </div>
 );
 
-const HostInfos = ({ host, rating }) => (
-  <div className="accomodation_header_host-infos">
+const AccomodationHeader = ({
+  accomodation: {rating, title, host, location, tags},
+}) => (
+  <div className="accomodation_header">
+    <Infos title={title} location={location} tags={tags} />
     <Host host={host} />
     <Ratings rating={rating} />
   </div>
 );
 
-const Header = ({ rating, title, host, location, tags }) => (
-  <div className="accomodation_header">
-    <MainInfos title={title} location={location} tags={tags} />
-    <HostInfos host={host} rating={rating} />
-  </div>
-);
-
-const Content = ({ description, equipments }) => (
-  <div className="accomodation_details">
-    <Dropdown title="Description" content={<p>{description}</p>} />
-    <Dropdown
-      title="Équipements"
-      content={
-        <ul>
-          {equipments.map((equipment) => (
-            <li key={equipment}>{equipment}</li>
-          ))}
-        </ul>
-      }
-    />
-  </div>
-);
+const AccomodationContent = ({description, equipments}) => {
+  return (
+    <div className="accomodation_details">
+      <Dropdown title="Description" data={description} />
+      <Dropdown title="Équipements" data={equipments} />
+    </div>
+  );
+};
 
 export const Accomodation = () => {
-  const accomodation = useAccomodations().getAccomodationById(
-    useParams().accomodationId
-  );
+  const {accomodationId} = useParams();
+  const {accomodations, loading} = useAccomodations(accomodationId);
 
-  if (!accomodation) return <Navigate to="/404" />;
+  if (loading) return null; // loader || skeleton
+  if (!loading && !accomodations.length) return <Error404 />;
+
+  const accomodation = accomodations[0];
 
   return (
     <Layout>
       <div className="accomodation">
         <Carousel pictures={accomodation?.pictures} />
-        <Header {...accomodation} />
-        <Content
+        <AccomodationHeader accomodation={accomodation} />
+        <AccomodationContent
           description={accomodation?.description}
           equipments={accomodation?.equipments}
         />
