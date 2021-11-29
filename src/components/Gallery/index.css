@@ -9,8 +9,10 @@
 
 @media screen and (min-width: 900px) {
   .gallery {
+    margin: 50px auto;
+    max-width: 1200px;
     border-radius: 25px;
     grid-template-columns: 340px;
-    background-color: var(--white-color);
+    background-color: var(--secondary-color);
   }
 }

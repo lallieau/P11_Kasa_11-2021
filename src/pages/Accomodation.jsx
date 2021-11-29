@@ -24,8 +24,10 @@ const AccomodationHeader = ({
 }) => (
   <div className="accomodation_header">
     <Infos title={title} location={location} tags={tags} />
-    <Host host={host} />
-    <Ratings rating={rating} />
+    <div className="accomodation_header--rigth">
+      <Host host={host} />
+      <Ratings rating={rating} />
+    </div>
   </div>
 );
 

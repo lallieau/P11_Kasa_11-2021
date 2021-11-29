@@ -32,6 +32,14 @@
   flex-direction: column;
 }
 
+.accomodation_header--rigth {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
 @media screen and (min-width: 900px) {
   .accomodation_header_host-infos {
     display: block;
@@ -46,5 +54,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+
+  .accomodation_header--rigth {
+    display: block;
   }
 }
