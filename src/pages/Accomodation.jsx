@@ -5,7 +5,7 @@ import {Tag} from '../components/Tag';
 import {Host} from '../components/Host';
 import {Ratings} from '../components/Ratings';
 import {Dropdown} from '../components/Dropdown';
-import {Error404} from '../components/Errors/404';
+import {Error} from '../pages/Error';
 import {useAccomodations} from '../hooks/useAccomodations';
 import '../styles/accomodation.css';
 
@@ -44,8 +44,8 @@ export const Accomodation = () => {
   const {accomodationId} = useParams();
   const {accomodations, loading} = useAccomodations(accomodationId);
 
-  if (loading) return null; // loader || skeleton
-  if (!loading && !accomodations.length) return <Error404 />;
+  if (loading) return null; 
+  if (!loading && !accomodations.length) return <Error />;
 
   const accomodation = accomodations[0];
 

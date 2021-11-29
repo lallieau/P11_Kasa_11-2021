@@ -19,7 +19,6 @@ export const useAccomodations = accomodationId => {
     if (accomodationId) {
       return handleAccomodations(getAccomodationById(accomodationId));
     }
-
     handleAccomodations(getAccomodations());
   }, [accomodationId]);
 
